@@ -92,6 +92,18 @@ const PageCheckout: FC<InterfaceCheckoutProps> = ({
                 loading: "Paying...",
                 success: "Payment Success!",
                 error: "Something went wrong",
+            },
+            {
+                style: {
+                    background: "#5BB543",
+                    color: "#FFF",
+                    borderRadius: "3px",
+                    fontWeight: 400,
+                },
+                iconTheme: {
+                    primary: "#FFF",
+                    secondary: "#5BB543",
+                },
             }
         )
     }
