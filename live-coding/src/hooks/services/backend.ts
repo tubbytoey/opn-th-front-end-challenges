@@ -126,28 +126,28 @@ export const postPayment = () => {
                 url: "/pay",
                 params: payload,
             })
-            .then(successResolver)
-            .then(() => {
-                wait(3000)
-                // After Request state
-                setState((old: any) => ({
-                    ...old,
-                    loading: false,
-                }))
-            })
-            .catch((err) => {
-                // Return cancelled error immediately
-                if (isCancel(err)) return err
+                .then(successResolver)
+                .then(() => {
+                    wait(3000)
+                    // After Request state
+                    setState((old: any) => ({
+                        ...old,
+                        loading: false,
+                    }))
+                })
+                .catch((err) => {
+                    // Return cancelled error immediately
+                    if (isCancel(err)) return err
 
-                setState((old: any) => ({
-                    ...old,
-                    error: err?.response?.data?.message || err.message,
-                }))
-            })
+                    setState((old: any) => ({
+                        ...old,
+                        error: err?.response?.data?.message || err.message,
+                    }))
+                })
 
             if (isCancel(await Api)) return
 
- 
+
         },
         [setState]
     )

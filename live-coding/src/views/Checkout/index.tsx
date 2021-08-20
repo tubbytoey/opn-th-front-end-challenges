@@ -73,8 +73,7 @@ const PageCheckout: FC<InterfaceCheckoutProps> = ({
     )
 
     const onSubmit = (values: TypeCheckoutFormValues) => {
-        toast
-        .promise(
+        toast.promise(
             post({
                 paymentInfo: {
                     cardInfo: {
