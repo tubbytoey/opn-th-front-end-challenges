@@ -85,6 +85,26 @@ export const Input = styled.input`
     }
 `
 
+export const CardInputContainer = styled.div`
+    position: relative;
+`
+
+export const CardIconContainer = styled.div`
+    display: flex;
+    position: absolute;
+    top: 11px;
+    right: 7px;
+`
+
+export const PayButton = styled.button`
+    min-width: 137px;
+    height: 40px;
+    background: #3C4257;
+    box-shadow: 0px 3px 20px rgb(0 0 0 / 10%);
+    border-radius: 4px;
+    color: var(--color_base);
+`
+
 export const ErrorMessage = styled.div`
     color: var(--error);
     font-weight: 500;
